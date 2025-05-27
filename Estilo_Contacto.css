@@ -1,0 +1,336 @@
+
+.pre-header {
+  background-color: #ebd8d8e4;
+  padding: 01px 5px;
+  border-bottom: 1px solid #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+}
+.pre-header-icons {
+  display: flex;
+  justify-content: flex-end; /* ✅ Alineación a la derecha */
+  align-items: center;
+  gap: 16px;
+}
+.pre-header-text {
+  color: #ec0808;
+  font-weight: bold;
+  font-size: 16px;
+}
+.pre-header-icons a i {
+  font-size: 10px;
+  color: #fff;
+  background-color: #999;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s;
+}
+/* Colores individuales */
+.pre-header-icons a[aria-label="Facebook"] i { background-color: #3b5998; }
+.pre-header-icons a[aria-label="Instagram"] i { background-color: #e1306c; }
+.pre-header-icons a[aria-label="Twitter"] i {background-color: #0796ef; }
+.pre-header-icons a[aria-label="YouTube"] i {background-color: #ff0000; }
+
+.pre-header-icons a i:hover {
+  transform: scale(1.2);
+  opacity: 0.9;
+}
+
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      background-color: #fff;
+      color: #333;
+    }
+
+header {
+      background-color: red;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+* {
+      box-sizing: border-box;
+    }
+   
+
+
+.section {
+    padding: 20px;
+    background-color: white;
+    margin: 20px 0;
+}
+ 
+
+.section h2{
+    margin-bottom: 15px;
+    color: red;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+     flex: 1;
+   
+}
+
+form label {
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+form button:hover {
+    background-color: lightblue;
+}
+ 
+.map-container {
+      text-align: center;
+      padding: 2rem;
+    }
+.map-container iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+
+ .formulario-modern-enhanced {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+/* Formulario ya tiene estilo con .form-container */
+
+.form-container {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+/* Contenedor principal: dos columnas */
+
+.form-sucursal-wrapper {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Lista de sucursales en 3 columnas */
+
+.sucursal-lista {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+/* Columna derecha: sidebar vertical con carrusel, formulario y redes */
+
+.sidebar-formulario {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 400px;
+}
+
+/* Formulario */
+
+.form-container {
+  background-color: #f4f4f4;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Redes sociales abajo del formulario */
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  color: #f3b4b4; /* color actual (puedes cambiarlo) */
+  font-size: 4rem;
+  transition: color 0.3s ease;
+  gap: 30px;
+
+}
+
+.social-media a {
+  color: red; /* rojo directo */
+  font-size: 4rem;
+  transition: transform 0.3s ease;
+}
+
+.social-media a:hover {
+  color: #e19b9b; /* rojo transparente al pasar el mouse */
+  
+   
+}
+
+.social-media img {
+  width: 32px;
+  height: 32px;
+
+}
+
+.sucursal img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+}
+
+.sucursal {
+  background-color: #fef3f3;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.sucursal:hover {
+  background-color: #ffe5e5;
+  border-color: #b30000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+.sucursal.active {
+  border-color: #b30000;
+  box-shadow: 0 4px 12px rgba(225, 11, 11, 0.4);
+  background-color: #ffebeb;
+}
+
+      .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+      }
+
+      .main {
+        margin-left: 0;
+        padding: 1rem;
+      }
+
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+    }
+    
+   /* Footer Styles */
+.footer {
+  background-color: red;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-social h3 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.footer-social {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Centra los íconos horizontalmente */
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.social-links li a {
+  color: white;
+  font-size: 1.5em;
+  transition: color 0.3s ease;
+  align-items: center;
+}
+
+.social-links li a:hover {
+  color: #f0c040;
+  align-items: center;
+}
+
+.footer-info {
+  margin-top: 30px;
+  font-size: 0.9em;
+    
+}

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contáctenos - Supermercados Bravo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="Estilo_Contacto.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</head>
+
+<body>
+
+              <div class="pre-header">
+                  <div class="pre-header-icons">
+                    <span class="pre-header-text">Síguenos:</span>
+                    <a href="https://www.facebook.com/SupermercadosBravo/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/supermercadosbravo/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/super_bravo" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UC2d8fk6B0-QWVVbUi-ypqDQ/videos" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                  </div>
+              </div>
+
+  <header>
+
+           <nav>
+             <ul>
+               <li><a href="index.html"><h2>Inicio</h2></a></li>
+               <li><a href="productos.html"><h2>Productos</h2></a></li>
+               <li><a href="contacto.html"><h2>Contáctenos</h2></a></li>
+             </ul>
+           </nav>
+  </header>
+
+<br>
+<br>
+
+      <!-- Sidebar derecho ( formulario / mapa / carrusel / redes) -->
+
+  <main class="form-sucursal-wrapper">
+       
+               <!-- Columna izquierda: sucursales en 3 columnas -->
+              
+          <section class="sucursal-lista">
+
+          <div class="sucursal" onclick="updateMap('18.466241934569993, -69.81183220573406')"> 
+              <img src="img/Tiendas/Bravo_Las Americas.png" alt="Bravo Las Américas">
+              <p><span style="color: red;"><strong>Bravo Las Américas</strong></span></p>
+              <b>Dirección</b><strong>:</strong> Las Américas, Marginal Km 10 1/2,Sto.Dgo.Este.</p>
+            </div>
+
+          <div class="sucursal" onclick="updateMap('18.48921651249485, -69.96392052841318')"> 
+              <img src="img/Tiendas/Bravo_Los_Proceres.png" alt="Bravo Los Proceres">
+              <p><span style="color: red;"><strong>Bravo Los Próceres</strong></span></p>
+              <p><b>Dirección</b><strong>:</strong> Av.Los Próceres Esq. Cenovi, frente a Intec,Sto.Dgo.Oeste.</p>
+            </div>  
+  
+          <div class="sucursal" onclick="updateMap('18.459160719398746, -69.98463547689904')"> 
+            <img src="img/Tiendas/Bravo_Prolongacion_27_de_Febrero.png" alt="Bravo Los Proceres">
+            <p><span style="color: red;"><strong>Bravo Prolongación 27</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong> Av.Prolongación 27 de Febrero, frente a Colinas del Oeste,Sto.Dgo.Oeste.</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('18.496084826236615, -69.86260806340383')">
+            <img src="img/Tiendas/Bravo_Ozama.png" alt="Bravo Ozama">
+            <p><span style="color: red;"><strong>Bravo Ozama</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong> Calle Proyecto,#33,Sto.Dgo.Este</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('18.475498045573335, -69.94353087934893')">
+            <img src="img/Tiendas/Bravo_Churchill.png" alt="Oficinas Corporativas Bravo">
+            <p><span style="color: red;"><strong>Oficinas Corporativas Bravo</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong> Av.Winston Churchill,#1452,Ensanche Julieta,Sto.Dgo.D.N.</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('18.279329844696765, -70.32449250574015')">
+            <img src="img/Tiendas/Bravo_Bani.png" alt="Bravo Baní">
+            <p><span style="color: red;"><strong>Bravo Baní</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong> Carretera Sanchez,Esquina Alejandro Acosta,Peravia(Bani).</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('18.52064626844836, -69.91576655161194')">
+            <img src="img/Tiendas/Bravo_Villa_Mella.png" alt="Bravo Villa Mella">
+            <p><span style="color: red;"><strong>Bravo Villa Mella</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong> Av.Hermanas Mirabal,Casi Esquina Av.Mirador Norte,Sto.Dgo.Norte.</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('18.49520277659098, -69.77732289223916')">
+            <img src="img/Tiendas/Bravo_Hipica.png" alt="Bravo Av. Hípica">
+            <p><span style="color: red;"><strong>Bravo Av. Hípica</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong> Av Hípica,#11707,Sto.Dgo.(Este).</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('19.215280511109427, -70.51213240386201')">
+            <img src="img/Tiendas/Bravo_La_Vega.png" alt="Bravo La Vega">
+            <p><span style="color: red;"><strong>Bravo La Vega</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong> Av.Pedro A.Rivera,Km 1 1/2,frente a Abonos Fersan,La Vega.</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('18.42396226112679, -70.09882280573545')">
+            <img src="img/Tiendas/Bravo_San_Cristobal.png" alt="Bravo San Cristóbal">
+            <p><span style="color: red;"><strong>Bravo San Cristóbal</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong></strong> C/Privada casi esquina carretera Sánchez,Madre Vieja Norte,San Cristobal.</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('18.555756275593158, -69.94023051922517')">
+            <img src="img/Tiendas/Bravo_Jacobo.png" alt="Bravo Jacobo">
+            <p><span style="color: red;"><strong>Bravo Jacobo</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong> Av.Jacobo Majluta Esq.C/Penetración,Frente a la Estación de gasolina Sunix,Sto.Dgo.Norte.</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('19.283328312714566, -70.28082710755443')">
+            <img src="img/Tiendas/Bravo_San_Francisco.png" alt="Bravo San Francisco">
+            <p><span style="color: red;"><strong>Bravo San Francisco</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong> Av.Presidente Antonio Guzmán Fernández,Entrada Terranova Estates,San Francisco de Macorís.</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('18.4531847580887, -69.97320349039317')">
+            <img src="img/Tiendas/Bravo_Luperon.png" alt="Bravo Luperón">
+            <p><span style="color: red;"><strong>Bravo Luperón</strong></span></p>
+            <p><b>Dirección</b><strong>:</strong> Av.Luperón No.344, próximo a la plaza de la Bandera,Sto.Dgo.D.N..</p>
+          </div>
+
+          <div class="sucursal" onclick="updateMap('19.48227369840213, -70.7266941275874')">
+            <img src="img/Tiendas/Bravo_Estrella_Sadhala.png" alt="Estrella_Sadhala">
+            <p><span style="color: red;"><strong> Bravo Estrella Estrella Sadhala(Santiago)</strong></span></p>
+            <p><strong>Dirección:</strong> Av.Salvador Estrella Sadhalá Esquina Ave.República de Argentina,Santiago.</p>
+          </div>
+            
+          <div class="sucursal" onclick="updateMap('19.451498817398324, -70.653381386824')">
+            <img src="img/Tiendas/Bravo_Pontezuela.png" alt="Bravo Pontezuela">
+            <p><span style="color: red;"><strong> Bravo Pontezuela(Santiago)</strong></span></p>
+            <p><strong>Dirección:</strong> Carretera Duarte con avenida Penetración, Santiago.</p>
+          </div>
+
+
+          <div class="sucursal" onclick="updateMap('18.493840928637532, -69.80565804990988')">
+            <img src="img/Tiendas/Bravo_Real_Oriental.png" alt="Bravo Ciudad Real Oriental">
+            <p><span style="color: red;"><strong>Bravo Ciudad Real Oriental</strong></span></p>
+            <p></p><b>Dirección</b><strong>:</strong> Bravo Ciudad Real Oriental, Autop. de San Isidro,#84,Sto.Dgo.Este.</p>
+          </div>
+        
+          <div class="sucursal" onclick="updateMap('18.508167007839813, -69.97942422370144')">
+            <img src="img/Tiendas/Bravo_Republica_de_Colombia.png" alt="Bravo Ciudad Real Oriental">
+            <p><span style="color: red;"><strong>Bravo Republica de Colombia</strong></span></p>
+            <p></p><b>Dirección</b><strong>:</strong> Republica de Colombia,Av.República de Colombia #69,Sto. Dgo.Oeste\</p>
+          </div>
+       
+          <div class="sucursal" onclick="updateMap('18.43136993423489, -69.97152815767066')">
+            <img src="img/Tiendas/Bravo_Independencia.png" alt="Bravo Ciudad Real Oriental">
+            <p><span style="color: red;"><strong>Bravo Independencia</strong></span></p>
+            <p></p><b>Dirección</b><strong>:</strong> Bravo Independencia, Av. Independencia KM 9 1/2,Sto. Dgo.Oeste</p>
+          </div>
+
+      </section>
+
+      <!-- Sidebar a la derecha con carrusel y formulario -->
+
+    <aside class="sidebar-formulario">
+             
+
+                       <!-- Formulario aquí -->
+
+                <div class="form-container">
+                  <h2 style="color: red;">Contáctanos</h2>
+              
+                  <form id="contactForm">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje..." required></textarea>
+
+                    <button type="submit">Enviar mensaje</button>
+                  </form>
+                  <p id="formResponse" style="margin-top:1rem;color:green;"></p>
+                </div>       
+
+                  <div class="map-container" id="map">
+                    <iframe id="mapFrame" src="https://www.google.com/maps/d/embed?mid=1eDk6XBSai4AJHPHc9LH4y4mHsx0&ehbc=2E312F"></iframe>
+                  </div>
+        
+     </aside>
+
+</main>
+
+  <script>
+    function updateMap(coords) {
+      document.getElementById('mapFrame').src = `https://www.google.com/maps?q=${coords}&z=15&output=embed`;
+      window.scrollTo({ top: document.getElementById('map').offsetTop, behavior: 'smooth' });
+    }
+  </script>
+
+<br>
+<br>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-social">
+      <h3>Síguenos en las redes sociales</h3>
+      <ul class="social-links">
+        <li>
+          <a href="https://www.facebook.com/SupermercadosBravo" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/supermercadosbravo/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@SupermercadosBravo" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/superbravo" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-info">
+      <p>&copy; 2025 Supermercados Bravo. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+</body>
+</html>

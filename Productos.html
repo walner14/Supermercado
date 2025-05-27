@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo de Productos - Supermercado Bravo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="Estilo_Productos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+</head>
+<body>
+
+              <div class="pre-header">
+                  <div class="pre-header-icons">
+                    <span class="pre-header-text">Síguenos:</span>
+                    <a href="https://www.facebook.com/SupermercadosBravo/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/supermercadosbravo/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/super_bravo" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UC2d8fk6B0-QWVVbUi-ypqDQ/videos" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                  </div>
+              </div>
+  <header>
+            <nav>
+             <ul>
+               <li><a href="index.html"><h2>Inicio</h2></a></li>
+               <li><a href="productos.html"><h2>Productos</h2></a></li>
+               <li><a href="contacto.html"><h2>Contáctenos</h2></a></li>
+             </ul>
+           </nav>
+  </header>
+
+  <div class="container">
+    <div class="sidebar">
+      <h2>Catálogo</h2>
+      <ul id="category-list">
+        <li onclick="filterCategory('agua')"><i class="fas fa-tint"></i> Agua y Refrescos</li>
+        <li onclick="filterCategory('aceite')"><i class="fas fa-oil-can"></i> Aceites y Vinagres</li>
+        <li onclick="filterCategory('carne')"><i class="fas fa-drumstick-bite"></i> Carnes</li>
+        <li onclick="filterCategory('cereal')"><i class="fas fa-bowl-rice"></i> Cereales</li>
+        <li onclick="filterCategory('congelado')"><i class="fas fa-snowflake"></i> Congelados</li>
+        <li onclick="filterCategory('embutido')"><i class="fas fa-bacon"></i> Embutidos</li>
+        <li onclick="filterCategory('higiene')"><i class="fas fa-heartbeat"></i> Higiene y Salud</li>
+        <li onclick="filterCategory('hogar')"><i class="fas fa-pump-soap"></i> Hogar y Limpieza</li>
+        <li onclick="filterCategory('jugo')"><i class="fas fa-glass-whiskey"></i> Jugos</li>
+        <li onclick="filterCategory('lacteo')"><i class="fas fa-cheese"></i> Lácteos</li>
+        <li onclick="filterCategory('pan')"><i class="fas fa-bread-slice"></i> Pan y Galleta</li>
+        <li onclick="filterCategory('pasta')"><i class="fas fa-utensils"></i> Pastas</li>
+        <li onclick="filterCategory('pescado')"><i class="fas fa-fish"></i> Pescados y Mariscos</li>
+        <li onclick="filterCategory('pollo')"><i class="fas fa-dove"></i> Pollos y Aves</li>
+        <li onclick="filterCategory('salsa')"><i class="fas fa-pepper-hot"></i> Salsas y Aderezos</li>
+        <li onclick="filterCategory('viveres')"><i class="fas fa-seedling"></i> Víveres</li>
+      </ul>
+    </div>
+    <div class="main">
+      <div class="catalog" id="catalog">
+        <div class="product" data-category="agua">
+          <img src="img/Productos/Agua_Dasani_600ml.png" alt="Agua Dasani">
+          <div class="product-info">
+            <h4>Agua Dasani 600ml</h4>
+            <p>RD$ 25.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="aceite">
+          <img src="img/Productos/Aceit_Crisol_16oz.png" alt="Aceite Crisol">
+          <div class="product-info">
+            <h4>Aceite Crisol 16oz</h4>
+            <p>RD$ 85.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="carne">
+          <img src="img/Productos/Carne_Molida_1lb.png" alt="Carne de Res">
+          <div class="product-info">
+            <h4>Carne de Res Molida 1lb</h4>
+            <p>RD$ 165.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="cereal">
+          <img src="img/Productos/Corn_Flex_Kellogg.png" alt="Corn Flakes">
+          <div class="product-info">
+            <h4>Cereal Corn Flakes</h4>
+            <p>RD$ 120.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="congelado">
+          <img src="img/Productos/Vegetales_Mixtos_Congelados.png" alt="Vegetales Congelados">
+          <div class="product-info">
+            <h4>Vegetales Mixtos Congelados</h4>
+            <p>RD$ 95.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="embutido">
+          <img src="img/Productos/Salami_Induveca_1lb.png" alt="Salami Induveca">
+          <div class="product-info">
+            <h4>Salami Induveca 1lb</h4>
+            <p>RD$ 110.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="enlatado">
+          <img src="img/Productos/Maíz Dulce en Lata_15oz.png" alt="Maíz Dulce">
+          <div class="product-info">
+            <h4>Maíz Dulce en Lata</h4>
+            <p>RD$ 45.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="higiene">
+          <img src="img/Productos/Jabon_Dove.png" alt="Jabón Dove">
+          <div class="product-info">
+            <h4>Jabón Dove Original</h4>
+            <p>RD$ 40.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="hogar">
+          <img src="img/Productos/Detergente_Liquido_Ariel.png" alt="Detergente Líquido">
+          <div class="product-info">
+            <h4>Detergente Líquido Ariel</h4>
+            <p>RD$ 185.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="jugo">
+          <img src="img/Productos/Jugo_Rica_Naranja_1L.png" alt="Jugo Rica">
+          <div class="product-info">
+            <h4>Jugo Rica Naranja 1L</h4>
+            <p>RD$ 60.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="lacteo">
+          <img src="img/Productos/Leche_Entera_Rica_Listamilk_1Lt.png" alt="Leche Rica">
+          <div class="product-info">
+            <h4>Leche Entera Rica Listamilk 1 Lt</h4>
+            <p>RD$ 75.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="pan">
+          <img src="img/Productos/Pan_Bimbo_Blanco.png" alt="Pan Bimbo">
+          <div class="product-info">
+            <h4>Pan Bimbo Blanco</h4>
+            <p>RD$ 70.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="pasta">
+          <img src="img/Productos/Spaghetti_Barilla_500g.png" alt="Pasta Barilla">
+          <div class="product-info">
+            <h4>Pasta Espaguetis N°7 Barilla 500gr</h4>
+            <p>RD$ 159.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="pescado">
+          <img src="img/Productos/Filete_de_Tilapia_1lb.png" alt="Filete de Tilapia">
+          <div class="product-info">
+            <h4>Tilapia Negra Importada Por Libra 1lb</h4>
+            <p>RD$ 139.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="pollo">
+          <img src="img/Productos/Pechuga_de_Pollo _1lb.png" alt="Pechuga de Pollo">
+          <div class="product-info">
+            <h4>Filete Pechuga de Pollo Congelada Por Libras</h4>
+            <p>RD$ 154.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="salsa">
+          <img src="img/Productos/Salsa_de_Tomate_Hunt's.png" alt="Salsa Hunt's">
+          <div class="product-info">
+            <h4>Salsa de Tomates Hunt's Sabor a Carne 24 Oz</h4>
+            <p>RD$ 184.00</p>
+          </div>
+        </div>
+        <div class="product" data-category="viveres">
+          <img src="img/Productos/Plátano_Verde_1lb.png" alt="Plátanos">
+          <div class="product-info">
+            <h4>Plátano Verde 1lb</h4>
+            <p>RD$ 19.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ <script>
+  function filterCategory(category) {
+    const products = document.querySelectorAll('.product');
+    products.forEach(product => {
+      if (product.getAttribute('data-category') === category) {
+        product.style.removeProperty('display'); // Restaurar el display original (grid item)
+      } else {
+        product.style.display = 'none'; // Ocultar los que no coinciden
+      }
+    });
+  }
+</script>
+
+<br>
+<br>
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-social">
+      <h3>Síguenos en las redes sociales</h3>
+      <ul class="social-links">
+        <li>
+          <a href="https://www.facebook.com/SupermercadosBravo" target="_blank" aria-label="Facebook">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/supermercadosbravo/" target="_blank" aria-label="Instagram">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.youtube.com/@SupermercadosBravo" target="_blank" aria-label="YouTube">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://twitter.com/superbravo" target="_blank" aria-label="Twitter">
+            <i class="fab fa-twitter"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-info">
+      <p>&copy; 2025 Supermercados Bravo. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

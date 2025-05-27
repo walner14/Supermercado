@@ -1,0 +1,33 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Bravo Núñez",
+        "direccion": "Av. Núñez de Cáceres esquina Gustavo M. Ricart"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.95,
+          18.48
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "nombre": "Bravo Enriquillo",
+        "direccion": "Av. Enriquillo esq. calle Cibao Este, Los Cacicazgos"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -69.94,
+          18.47
+        ]
+      }
+    }
+  ]
+}
